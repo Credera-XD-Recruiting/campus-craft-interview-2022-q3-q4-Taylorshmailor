@@ -32,9 +32,9 @@ const generateCardNode = (data) => {
   jobDesc.innerHTML = `${jobTitle} @ ${companyName}`;
   postNode.innerHTML = post;
   // Date & Location
-  // Sliced date json pbject in order to just return the date and not time
-  postDate.innerHTML = `${publishDate.slice(0,10)}`;
-  postLocation.innerHTML = `${city}, ${state}`;
+  // Reordering json object and displaying only date
+  postDate.innerHTML = `${publishDate.slice(5,7)}${publishDate.slice(7,10)}-${publishDate.slice(0,4)}`;
+  postLocation.innerHTML = `Posted: ${city}, ${state}`;
 
   if (authorAvatarSrc) {
     const avatarImg = document.createElement("img");
