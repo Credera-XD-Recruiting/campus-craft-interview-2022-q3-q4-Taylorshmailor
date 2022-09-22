@@ -16,6 +16,24 @@
     line-height: 24px;
 }
 
+.page-date {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+/* .page-location {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+} */
+
+.page-state {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
 .page-paragraph--smoke {
     color: var(--deepSmoke);
 }
@@ -32,7 +50,7 @@
     line-height: 20px;
 }
 
-.page-micro {
+.page-micro, .page-location {
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;   
