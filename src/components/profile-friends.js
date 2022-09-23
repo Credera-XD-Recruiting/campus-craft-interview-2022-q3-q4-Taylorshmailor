@@ -14,6 +14,7 @@ const generateListItemNode = (data) => {
   const nameNode = clone.querySelector("p.page-paragraph");
   const titleNode = clone.querySelector("p.page-micro");
   const avatarNode = clone.querySelector(".profile-list-item-avatar");
+  const topFriendNode = clone.querySelector(".top-friend-flag");
 
   nameNode.innerHTML = `${name}`;
   titleNode.innerHTML = `${jobTitle} @ ${companyName}`;
@@ -25,6 +26,10 @@ const generateListItemNode = (data) => {
     avatarImg.src = avatarSrc;
     avatarImg.setAttribute("aria-label", `${name}`);
     avatarNode.appendChild(avatarImg);
+  }
+
+  if (topFriend) {
+    topFriendNode.style.display = "block";
   }
 
   return clone;
