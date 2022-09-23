@@ -13,7 +13,7 @@ const activityStates = {
  * @return {Node} generated markup for a card
  */
 const generateCardNode = (data) => {
-  const { name, href, image } = data;
+  const { name, href, image, activity } = data;
   const templateId = "profile-group-results-item-template";
   const resultCardTemplate = document.getElementById(templateId);
   const clone = document.importNode(resultCardTemplate.content, true);
@@ -26,6 +26,20 @@ const generateCardNode = (data) => {
   titleNode.innerHTML = `${name}`;
   referenceNode.href = href;
   groupImageNode.src = image;
+
+  // check activity status of group json object
+  if (`${activity}` == activityStates.active) {
+    referenceNode.style.backgroundColor = "var(--secondary)";
+  } 
+  else if (`${activity}` == activityStates.moderate) {
+    referenceNode.style.backgroundColor = "var(--primary)";
+  }
+  else if (`${activity}` == activityStates.low) {
+    referenceNode.style.backgroundColor = "var(--warning)";
+  } 
+  else {
+    referenceNode.style.backgroundColor = "var(--grayscale_2)";
+  }
 
   return clone;
 };

@@ -28,6 +28,8 @@ const generateListItemNode = (data) => {
     avatarNode.appendChild(avatarImg);
   }
 
+  // check if top friend attribute is true
+  // mark with block if so
   if (topFriend) {
     topFriendNode.style.display = "block";
   }
