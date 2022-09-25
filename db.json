@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "s9df8ske-23n23490s8-12nkk123o",
+    "avatarSrc": "https://driftingcreatives.com/wp-content/uploads/2019/09/bailey_headshot.jpg",
     "firstName": "Ann",
     "lastName": "Smith",
     "jobTitle": "Content Artist",
@@ -17,6 +18,7 @@
     },
     "pinnedPosts": [
       {
+        "authorAvatarSrc": "https://driftingcreatives.com/wp-content/uploads/2019/09/wade_headshot.jpg",
         "authorFirstName": "Jamie",
         "authorLastName": "Cowhan",
         "jobTitle": "Content Artist",
@@ -27,6 +29,7 @@
         "state": "TX"
       },
       {
+        "authorAvatarSrc": "https://driftingcreatives.com/wp-content/uploads/2019/09/gavin_headshot_large.jpg",
         "authorFirstName": "Stuart",
         "authorLastName": "Raymond",
         "jobTitle": "Product Designer",
