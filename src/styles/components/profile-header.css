@@ -48,3 +48,9 @@
 #profile-header .skeleton-block--half {
   height: 42px;
 }
+
+.profile-job {
+  font-size: 24px;  
+  color: var(--deepSmoke);  
+}
+

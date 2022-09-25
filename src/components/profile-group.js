@@ -6,6 +6,7 @@ const activityStates = {
   moderate: "moderate",
   low: "low",
 };
+
 /**
  * Function which generates a single Card node based on a dataset
  *
@@ -13,15 +14,14 @@ const activityStates = {
  * @return {Node} generated markup for a card
  */
 const generateCardNode = (data) => {
-  const { name, href, image, activity } = data;
+  const { name, href, image, activity, favorite } = data;
   const templateId = "profile-group-results-item-template";
   const resultCardTemplate = document.getElementById(templateId);
   const clone = document.importNode(resultCardTemplate.content, true);
   const titleNode = clone.querySelector("p.page-paragraph");
   const referenceNode = clone.querySelector("a.profile-group-results-card");
-  const groupImageNode = clone.querySelector(
-    "a.profile-group-results-card img"
-  );
+  const groupImageNode = clone.querySelector("a.profile-group-results-card img");
+  const favoriteNode = clone.querySelector(".favorite-group");
 
   titleNode.innerHTML = `${name}`;
   referenceNode.href = href;
@@ -40,6 +40,12 @@ const generateCardNode = (data) => {
   else {
     referenceNode.style.backgroundColor = "var(--grayscale_2)";
   }
+
+  // check if favorite is false
+  // remove element if so
+  if (favorite == false) {
+    favoriteNode.remove();
+  } 
 
   return clone;
 };
