@@ -25,8 +25,8 @@ const generateCardNode = (data) => {
   const jobDesc = clone.querySelector(".post-author-info .page-micro");
   const postNode = clone.querySelector(".post-content");
   const avatarNode = clone.querySelector(".post-author-avatar");
-  const postDate = clone.querySelector(".page-date");
-  const postLocation = clone.querySelector(".page-location");
+  const postDate = clone.querySelector(".post-date");
+  const postLocation = clone.querySelector(".post-location");
 
   authorName.innerHTML = `${authorFirstName} ${authorLastName}`;
   jobDesc.innerHTML = `${jobTitle} @ ${companyName}`;

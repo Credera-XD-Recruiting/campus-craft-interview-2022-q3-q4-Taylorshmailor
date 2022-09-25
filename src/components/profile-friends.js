@@ -6,6 +6,7 @@ import { removeChildNodes } from "../utils";
  * @param {object} data data containing attributes of a listItem
  * @return {Node} generated markup for a card
  */
+
 const generateListItemNode = (data) => {
   const { avatarSrc, name, jobTitle, companyName, topFriend } = data;
   const templateId = "friend-list-item-template";
@@ -26,6 +27,17 @@ const generateListItemNode = (data) => {
     avatarImg.src = avatarSrc;
     avatarImg.setAttribute("aria-label", `${name}`);
     avatarNode.appendChild(avatarImg);
+  } else {
+    // splitting name into first and last
+    // Grab only first index for both and turn uppercase
+    const first = name.split(" ")[0];
+    const last = name.split(" ")[1];
+    const initials = first[0].toUpperCase() + last[0].toUpperCase();
+
+    const profileInitials = document.createElement('p');
+    profileInitials.className = 'profile-initials';
+    profileInitials.innerHTML = initials;
+    avatarNode.appendChild(profileInitials);
   }
 
   // check if top friend attribute is true

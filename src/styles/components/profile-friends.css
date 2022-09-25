@@ -55,6 +55,14 @@
   margin-left: 24px;
 }
 
+.profile-initials {
+  display: flex;
+  justify-content: center;
+  color: var(--grayscale_1);
+  font-size: xx-large;
+  padding: 25px;
+}
+
 /* SKELETON LOADING */
 
 #profile-friends .skeleton-block {

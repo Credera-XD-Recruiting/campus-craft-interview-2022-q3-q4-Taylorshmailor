@@ -16,14 +16,6 @@
     line-height: 24px;
 }
 
-.page-date{
-    font-size: 11px;
-    font-weight: 500;
-    line-height: 30px;   
-    padding-left: 10px;
-    color: var(--lightgray); 
-}
-
 .page-paragraph--smoke {
     color: var(--deepSmoke);
 }
@@ -40,7 +32,7 @@
     line-height: 20px;
 }
 
-.page-micro, .page-location {
+.page-micro {
     font-size: 14px;
     font-weight: 400;
     line-height: 1px;   
