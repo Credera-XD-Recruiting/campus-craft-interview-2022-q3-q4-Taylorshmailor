@@ -43,10 +43,40 @@ const generateListItemNode = (data) => {
  *
  * @param {object} resultsData JSON payload of results
  */
+
+ // sort function here
+ // split name --> [first][last]
+ // compare by last
+const sortFriends = (a, b) => {
+  if (a.split(" ")[1] < b.split(" ")[1]) 
+    return -1;
+  if (a.split(" ")[1] > b.split(" ")[1]) 
+    return 1;
+  return 0;
+};
+
 export const generateFriendsListFromTemplate = (resultsData) => {
   const friendsListSection = document.querySelector(
     "#profile-friends .profile-friends-list"
   );
+
+
+  // if both are top friend --> sort alphabetically between the top
+  // check if a is top friend case
+  // check if b is top friend case
+  // run sortFriends as default
+  resultsData.friends.sort((a,b) => {
+    if (a.topFriend && b.topFriend) {
+      return sortFriends(a.name, b.name);
+    } else {
+      if (a.topFriend)
+        return -1;
+      else if (b.topFriend) 
+        return 1;
+      else 
+        return sortFriends(a.name, b.name);
+    }
+  });
 
   if (resultsData.friends && resultsData.friends.length > 0) {
     removeChildNodes(friendsListSection);
