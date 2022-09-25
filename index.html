@@ -170,39 +170,44 @@
   </template>
 
   <!-- Template | Used to generate friends -->
-  <template id="friend-list-item-template">
-    <li class="profile-list-item fade-in">
-      <div class="profile-list-item-avatar"></div>
-      <div class="profile-list-item-info">
-        <p class="top-friend-flag page-xs">Top Friend</p>
-        <p class="page-paragraph">Jamie Cowhan </p>
-        <p class="page-micro">Senior Designer @ Facebook</p>
-      </div>
-    </li>
-  </template>
+    <template id="friend-list-item-template">
+      <li class="profile-list-item fade-in">
+        <div class="profile-list-item-avatar"></div>
+        <div class="profile-list-item-info">
+          <p class="top-friend-flag page-xs">Top Friend</p>
+          <p class="page-paragraph">Jamie Cowhan </p>
+          <p class="page-micro">Senior Designer @ Facebook</p>
+        </div>
+      </li>
+    </template>
 
   <!-- Template | Used to generate pinned posts -->
   <template id="profile-post-item-template">
-    <div class="content-card">
-      <div class="post-author fade-in">
-        <div class="post-author-avatar fade-in"></div>
-        <div class="post-author-info fade-in">
-          <div style="display:flex;">
-            <p class="page-paragraph">Template Name</p>
-            <p class="post-date">Template Date</p>
-          </div>
-          <div style="display:flex; justify-content: space-between;">
-            <p class="page-micro">Template @ Template</p>
-            <p class="post-location">Template city, state</p>
+    <li class="profile-list-item-posts fade-in">
+      <div class="content-card">
+        <div class="accordian">
+          <button type="button" class="accordian__button">
+            <div class="post-author fade-in">
+              <div class="post-author-avatar fade-in"></div>
+              <div class="post-author-info fade-in">
+                <div style="display:flex;">
+                  <p class="page-paragraph">Template Name</p>
+                  <p class="post-date">Template Date</p>
+                </div>
+                <div style="display:flex; justify-content: space-between;">
+                  <p class="page-micro">Template @ Template</p>
+                  <p class="post-location">Template city, state</p>
+                </div>
+              </div>
+            </div>
+          </button>
+          <div class="accordian__content page-body">
+            <p class="page-body post-content fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas commodi at nihil maxime consectetur! 
+              Quis, praesentium? Inventore beatae perspiciatis error facere tempore eaque. Unde qui eaque voluptatem 
+              dolorem similique officiis.</p>
           </div>
         </div>
       </div>
-      <p class="page-body post-content fade-in">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue porttitor
-        est arcu elit feugiat. Odio in auctor magna mattis tellus. Sit ornare
-        tincidunt id purus pulvinar fusce libero. Justo, habitasse viverra sem
-        hendrerit.
-      </p>
-    </div>
+    </li>
   </template>
 </html>

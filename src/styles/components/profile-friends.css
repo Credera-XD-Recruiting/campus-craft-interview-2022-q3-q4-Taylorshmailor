@@ -23,6 +23,22 @@
   border-radius: 10px;
 }
 
+.profile-list-item-posts {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: var(--grayscale_1);
+  border-radius: 10px;
+}
+
+.profile-list-item-posts:hover {
+  background-color: var(--grayscale_2);
+  color: var(--midnightBlack);
+  transition: 0.3s;
+}
+
 .profile-list-item:last-child {
   margin-bottom: 0;
 }

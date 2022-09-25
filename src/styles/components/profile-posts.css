@@ -61,3 +61,36 @@
   line-height: 1px;   
   color: var(--deepSmoke);  
 }
+
+.accordian__button {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--grayscale_1);
+  color: var(--midnightBlack);
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.accordian__button::after {
+  content: none;
+  float: right;
+  transform: scale(1.5);
+}
+
+.accordian__button--active {
+  background: var(--grayscale_1);
+}
+
+.accordian__button--active::after {
+  content: none;
+}
+
+.accordian__content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s;
+  padding: 0 15px;
+}

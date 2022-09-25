@@ -46,6 +46,21 @@ const generateCardNode = (data) => {
     avatarNode.appendChild(avatarImg);
   }
 
+  // implementing function for accordian button class (making collapsible posts)
+  clone.querySelectorAll('.accordian__button').forEach(button => {
+    button.addEventListener('click', () => {
+      const accordianContent = button.nextElementSibling;
+
+      button.classList.toggle('accordian__button--active');
+
+      if (button.classList.contains('accordian__button--active')) {
+        accordianContent.style.maxHeight = accordianContent.scrollHeight + 'px';
+      } else {
+        accordianContent.style.maxHeight = 0;
+      }
+    });
+  });
+
   return clone;
 };
 
@@ -62,8 +77,10 @@ export const generatePinnedPostsFromTemplate = (resultsData) => {
 
   removeChildNodes(pinnedPostsList);
 
-  if (resultsData.pinnedPost) {
-    const postNode = generateCardNode(resultsData.pinnedPost);
-    pinnedPostsList.appendChild(postNode);
+  if (resultsData.pinnedPost && resultsData.pinnedPosts.length > 0) {
+    for (let i = 0; i < resultsData.pinnedPosts.length; i++) {
+      const postNode = generateCardNode(resultsData.pinnedPosts[i]);
+      pinnedPostsList.appendChild(postNode);
+    }
   }
 };
