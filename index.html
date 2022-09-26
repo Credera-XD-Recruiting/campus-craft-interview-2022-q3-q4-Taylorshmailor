@@ -52,7 +52,7 @@
             </div>
           </div>
         </section>
-
+  
         <section id="profile-posts">
           <h2 class="page-heading-2">Pinned Posts</h2>
           <div class="profile-post-results">
@@ -170,16 +170,16 @@
   </template>
 
   <!-- Template | Used to generate friends -->
-    <template id="friend-list-item-template">
-      <li class="profile-list-item fade-in">
-        <div class="profile-list-item-avatar"></div>
-        <div class="profile-list-item-info">
-          <p class="top-friend-flag page-xs">Top Friend</p>
-          <p class="page-paragraph">Jamie Cowhan </p>
-          <p class="page-micro">Senior Designer @ Facebook</p>
-        </div>
-      </li>
-    </template>
+  <template id="friend-list-item-template">
+    <li class="profile-list-item fade-in">
+      <div class="profile-list-item-avatar"></div>
+      <div class="profile-list-item-info">
+        <p class="top-friend-flag page-xs">Top Friend</p>
+        <p class="page-paragraph">Jamie Cowhan </p>
+        <p class="page-micro">Senior Designer @ Facebook</p>
+      </div>
+    </li>
+  </template>
 
   <!-- Template | Used to generate pinned posts -->
   <template id="profile-post-item-template">
@@ -202,7 +202,12 @@
             </div>
           </button>
           <div class="accordian__content page-body">
-            <p class="page-body post-content fade-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas commodi at nihil maxime consectetur! 
+            
+            <button onclick="document.getElementById('adjustFont').style.fontSize='small'" class="page-micro">Minimize</button>
+            <button onclick="document.getElementById('adjustFont').style.fontSize='medium'" class="page-micro">Normal</button>
+            <button onclick="document.getElementById('adjustFont').style.fontSize='large'" class="page-micro">Maximize</button>
+
+            <p class="page-body post-content fade-in" id="adjustFont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas commodi at nihil maxime consectetur! 
               Quis, praesentium? Inventore beatae perspiciatis error facere tempore eaque. Unde qui eaque voluptatem 
               dolorem similique officiis.</p>
           </div>
@@ -210,4 +215,6 @@
       </div>
     </li>
   </template>
+    
+  </div>
 </html>

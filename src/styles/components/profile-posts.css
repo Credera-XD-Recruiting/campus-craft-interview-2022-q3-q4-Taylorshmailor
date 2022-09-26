@@ -91,7 +91,16 @@
 
 .accordian__content {
   overflow: hidden;
+  overflow-y: scroll;
   max-height: 0;
   transition: max-height 0.2s;
   padding: 0 15px;
+}
+
+.post-initials {
+  display: flex;
+  justify-content: center;
+  color: var(--grayscale_1);
+  font-size: xx-large;
+  padding: 20px;
 }

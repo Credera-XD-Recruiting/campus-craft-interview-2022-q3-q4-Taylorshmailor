@@ -18,3 +18,4 @@ window.addEventListener("load", () => {
     generatePinnedPostsFromTemplate(results);
   });
 });
+

@@ -44,6 +44,17 @@ const generateCardNode = (data) => {
       `${authorFirstName} ${authorLastName}`
     );
     avatarNode.appendChild(avatarImg);
+  } else {
+    // splitting name into first and last
+    // Grab only first index for both and turn uppercase
+    const first = authorFirstName[0];
+    const last = authorLastName[0];
+    const initials = first.toUpperCase() + last.toUpperCase();
+
+    const profileInitials = document.createElement('p');
+    profileInitials.className = 'post-initials';
+    profileInitials.innerHTML = initials;
+    avatarNode.appendChild(profileInitials);
   }
 
   // implementing function for accordian button class (making collapsible posts)
