@@ -20,6 +20,11 @@
 
 .content-grid-block--friends {
   grid-area: "friends";
+  margin-top: 15px;
+  height: 45%; 
+  width: 100%;
+  overflow: auto; 
+  overflow-y: scroll;
 }
 
 .content-card {
@@ -35,8 +40,29 @@
 
 @media only screen and (min-width: 1024px) {
   .content-grid {
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 450px;
     grid-template-areas: "main friends";
     grid-column-gap: 20px;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--grayscale_1); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--grayscale_1); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--grayscale_2);  
 }
